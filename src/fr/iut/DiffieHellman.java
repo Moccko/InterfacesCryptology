@@ -1,4 +1,4 @@
-package examples;
+package fr.iut;
 
 import java.math.BigInteger;
 import java.util.Random;

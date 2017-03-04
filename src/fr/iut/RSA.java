@@ -1,4 +1,4 @@
-package examples;
+package fr.iut;
 
 import java.io.BufferedReader;
 import java.io.IOException;

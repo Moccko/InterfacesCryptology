@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package examples;
+package fr.iut;
 
 /**
  *
@@ -44,7 +44,7 @@ public class VigenereGUI extends javax.swing.JFrame {
         texteACrypter = new javax.swing.JTextField();
         jLabel3 = new javax.swing.JLabel();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("Cryptage de Vigenere");
 
         jLabel1.setText("Saisissez votre clé :");
 

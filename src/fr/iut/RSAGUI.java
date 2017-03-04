@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package examples;
+package fr.iut;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -50,7 +50,6 @@ public class RSAGUI extends javax.swing.JFrame {
         jScrollPane3 = new javax.swing.JScrollPane();
         texteDecrypteRSA = new javax.swing.JTextArea();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Cryptage RSA");
 
         jLabel3.setText("Saisissez votre message :");

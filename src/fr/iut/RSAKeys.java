@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package examples;
+package fr.iut;
 
 import java.awt.Toolkit;
 import java.awt.datatransfer.Clipboard;

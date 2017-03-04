@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package examples;
+package fr.iut;
 
 /**
  *
@@ -44,7 +44,9 @@ public class CaesarGUI extends javax.swing.JFrame {
         jLabel3 = new javax.swing.JLabel();
         texteACrypter = new javax.swing.JTextField();
 
-        jLabel2.setText("Saisissez votre clé (int) :");
+        setTitle("Cryptage de César");
+
+        jLabel2.setText("Saisissez votre clé :");
 
         cleCaesar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -52,20 +54,20 @@ public class CaesarGUI extends javax.swing.JFrame {
             }
         });
 
-        crypterCaesar.setText("Crypter (César)");
+        crypterCaesar.setText("Crypter");
         crypterCaesar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 crypterCaesarActionPerformed(evt);
             }
         });
 
-        jLabel5.setText("Message crypté (César)");
+        jLabel5.setText("Message crypté");
 
         texteCrypteCaesar.setColumns(20);
         texteCrypteCaesar.setRows(5);
         jScrollPane5.setViewportView(texteCrypteCaesar);
 
-        decrypteCaesar.setText("Décrypter (César)");
+        decrypteCaesar.setText("Décrypter");
         decrypteCaesar.setToolTipText("");
         decrypteCaesar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -73,7 +75,7 @@ public class CaesarGUI extends javax.swing.JFrame {
             }
         });
 
-        jLabel6.setText("Message décrypté (César)");
+        jLabel6.setText("Message décrypté");
 
         texteDecrypteCaesar.setEditable(false);
         texteDecrypteCaesar.setColumns(20);
@@ -107,16 +109,21 @@ public class CaesarGUI extends javax.swing.JFrame {
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addComponent(cleCaesar, javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLabel5)
-                                    .addComponent(crypterCaesar)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addComponent(jLabel5)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .addComponent(crypterCaesar))
                                     .addComponent(jScrollPane5, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(decrypteCaesar)
-                                    .addComponent(jLabel6)
-                                    .addComponent(jScrollPane6, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGap(0, 0, Short.MAX_VALUE))
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addComponent(jLabel6)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .addComponent(decrypteCaesar))
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addComponent(jScrollPane6, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGap(0, 0, Short.MAX_VALUE))))
                             .addComponent(texteACrypter, javax.swing.GroupLayout.Alignment.LEADING))
                         .addContainerGap())))
         );
@@ -133,15 +140,13 @@ public class CaesarGUI extends javax.swing.JFrame {
                 .addComponent(cleCaesar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(decrypteCaesar)
-                    .addComponent(crypterCaesar))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel6)
-                    .addComponent(jLabel5))
+                    .addComponent(jLabel5)
+                    .addComponent(crypterCaesar)
+                    .addComponent(decrypteCaesar))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jScrollPane6, javax.swing.GroupLayout.DEFAULT_SIZE, 250, Short.MAX_VALUE)
+                    .addComponent(jScrollPane6, javax.swing.GroupLayout.DEFAULT_SIZE, 200, Short.MAX_VALUE)
                     .addComponent(jScrollPane5))
                 .addContainerGap())
         );

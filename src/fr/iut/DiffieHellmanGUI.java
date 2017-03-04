@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package examples;
+package fr.iut;
 
 import java.awt.Toolkit;
 import java.awt.datatransfer.Clipboard;
@@ -42,7 +42,6 @@ public class DiffieHellmanGUI extends javax.swing.JFrame {
         DFKey = new javax.swing.JTextArea();
         copyDFKey = new javax.swing.JButton();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Diffie Hellman");
 
         jLabel11.setText("Saisissez a");
